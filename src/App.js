@@ -4,12 +4,10 @@ import Products from './components/Products/Products';
 
 export default function App() {
   return (
-    <>
-      <div>
-        <h1>
-          <Products />
-        </h1>
-      </div>
-    </>
+    <div>
+      <h1>
+        <Products />
+      </h1>
+    </div>
   );
 }

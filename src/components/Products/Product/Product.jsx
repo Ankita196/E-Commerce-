@@ -7,35 +7,31 @@ import {
   Typography,
   IconButton
 } from '@material-ui/core';
-import {AddShoppingCart} from "@material-ui/icons";
+import { AddShoppingCart } from '@material-ui/icons';
 import useStyles from './styles';
 
-const Product = ({product}) => {
-  const classes=useStyles()
+const Product = ({ product }) => {
+  const classes = useStyles();
   return (
-   <Card className ={classes.root}>
-<CarddMedia className={classes.media} image='' title={product.name}/>
-<CardContent >
-  <div className ={classes.cardContent}>
-    <Typography varient="h5" gutterBottom> 
-    {product.name}
-    </Typography>
-    <Typography varient="h5" > 
-    {product.price}
-    </Typography>
-     </div >
-     <Typography varient="h2" color="textSecondary" > 
-    {product.description}
-    </Typography>
-
-</CardContent>
-<CardActions disableSpacing className={classes.cardActions}>
-  <IconButton aria-label="Add-to-card">
-    <AddShoppingCart/>
-  </IconButton>
-</CardActions>
-   </Card>
-
-
+    <Card className={classes.root}>
+      <CarddMedia className={classes.media} image="" title={product.name} />
+      <CardContent>
+        <div className={classes.cardContent}>
+          <Typography varient="h5" gutterBottom>
+            {product.name}
+          </Typography>
+          <Typography varient="h5">{product.price}</Typography>
+        </div>
+        <Typography varient="h2" color="textSecondary">
+          {product.description}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing className={classes.cardActions}>
+        <IconButton aria-label="Add-to-card">
+          <AddShoppingCart />
+        </IconButton>
+      </CardActions>
+    </Card>
   );
 };
+export default Product;
