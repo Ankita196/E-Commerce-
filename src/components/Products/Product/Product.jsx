@@ -13,7 +13,16 @@ const Product = () => {
   return (
    <Card className ={classes.root}>
 <CarddMedia className={classes.media} image='' title={product.name}/>
-<CardContent></CardContent>
+<CardContent >
+  <div className ={classes.cardContent}>
+    <Typography varient="h5" gutterBottom> 
+    {product.name}
+    </Typography>
+    <Typography varient="h5" gutterBottom> 
+    {product.name}
+    </Typography>
+     </div >
+</CardContent>
    </Card>
 
 
