@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import {AddShoppingCart} from "@material-ui/icons"
 
-const Product = () => {
+const Product = ({product}) => {
   return (
    <Card className ={classes.root}>
 <CarddMedia className={classes.media} image='' title={product.name}/>
@@ -18,10 +18,14 @@ const Product = () => {
     <Typography varient="h5" gutterBottom> 
     {product.name}
     </Typography>
-    <Typography varient="h5" gutterBottom> 
+    <Typography varient="h5" > 
     {product.price}
     </Typography>
      </div >
+     <Typography varient="h2" color="textSecondary" > 
+    {product.description}
+    </Typography>
+
 </CardContent>
    </Card>
 
