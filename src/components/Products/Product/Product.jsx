@@ -19,7 +19,7 @@ const Product = () => {
     {product.name}
     </Typography>
     <Typography varient="h5" gutterBottom> 
-    {product.name}
+    {product.price}
     </Typography>
      </div >
 </CardContent>
