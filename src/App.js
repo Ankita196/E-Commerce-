@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import Products from './components/Products/Products';
 
-export default function App() {
+const App =()=> {
   return (
     <div>
       <h1>
@@ -11,3 +11,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App
