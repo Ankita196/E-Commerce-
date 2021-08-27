@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Card,
-  CardMedia,
+  CarddMedia,
   CardContent,
   CardActions,
   Typography,
