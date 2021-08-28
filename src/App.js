@@ -1,12 +1,11 @@
 import React from 'react';
 import './style.css';
-import Products from './components/Products/Products';
 
 const App =()=> {
   return (
     <div>
       <h1>
-        <Products />
+        product
       </h1>
     </div>
   );
