@@ -52,9 +52,11 @@ const Product = ({ title, image, price}) => {
         />
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            price:{price}
+          <Typography style={{marginBottom:0}}>
+            Price:{price}
           </Typography>
+          <button >Add To Cart</button >
+          <button >Description</button >
         </CardContent>
         
        
