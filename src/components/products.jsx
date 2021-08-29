@@ -7,7 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
+import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import { red } from '@material-ui/core/colors';
@@ -15,32 +15,39 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Product from "./Products/product"
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 345,
+    padding: '2px 4px',
+    display: 'flex',
+    margin: '40px auto',
+    alignItems: 'center',
+    width: 400
   },
-  media: {
-    paddingTop: '100%', // 16:9
-    width: '100%',
-    height: 150,
+  input: {
+    marginLeft: theme.spacing(5),
+    flex: 1,
+    width: 150
+  },
+  iconButton: {
+    padding: 10
+  },
+  heading: {
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: '#ad1457',
+
     justifyContent: 'center',
-    display: 'block',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: 50
+    fontFamily: ['Comic Sans MS', 'Comic Sans']
+    // backgroundColor: 'rgb(4, 5, 12)'
   },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest
-    })
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)'
-  },
-  avatar: {
-    backgroundColor: red[500]
+  roots: {
+    display: 'flex',
+    justifyContent: 'center',
+
+    '& > <ArrowRightIcon style={{fontSize:20}} />': {
+      margin: theme.spacing(2)
+    }
   }
 }));
 
@@ -54,24 +61,31 @@ const Products = () => {
   }, []);
 
   return (
-    <div >
-
-      {products.map((product, index) => (
-        
-          <Card className={classes.root}>
-            <CardHeader title={product.title} />
-            <CardMedia
-              className={classes.media}
-              image={product.image}
-              title={product.title}
-            />
-
-            <Typography>Price:{product.price}</Typography>
-          </Card>
-       
-      ))}{' '}
+<div>
+      
+      <div>
+        <Grid container spacing={7}>
+        {products.map((product, index)=> (
+            <Grid
+              item
+              xs={12}
+              sm={3}
+              style={{marginLeft:"auto", alignItems: 'center' }}
+            >
+              <Product
+                title={product.title}
+                image={product.image}
+                price={product.price}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     </div>
   );
+
+     
+ 
 };
 
 export default Products;
