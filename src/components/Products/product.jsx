@@ -42,11 +42,7 @@ const Product = ({ title, image, price}) => {
     <div>
       <Card className={classes.root}>
         <CardHeader
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
+          
           title={title}
          
         />
