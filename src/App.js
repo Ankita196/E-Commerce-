@@ -2,18 +2,24 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 
 const App =()=> {
-  const [product,setProduct]=useState({})
+  const [products,setProducts]=useState([])
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
+    .then((res)=>res.json())
+    .then((json)=>setProducts(json))
   }, []);
   
     
-if(product){
+
   return( 
-  <h1>{product.title}
-  </h1>
+  <div>
+    {products.map((product,index)=>(
+      <div>
+        <h1>{product.title}</h1>
+        <img src={product.image} />
+        <h1>{product.price}</h1>
+      </div>
+    ))} </div>
 
   );
 }
