@@ -22,7 +22,10 @@ const useStyles = makeStyles((theme) => ({
   media: {
    
     paddingTop: '56.25%', // 16:9
-   height:"50%",width:"50%"
+   height:"50%",
+   width:"50%",
+  marginLeft:"auto",
+  marginRight:"auto"
 
     
   },
