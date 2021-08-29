@@ -36,11 +36,7 @@ const useStyles = makeStyles(theme => ({
 
 const Product = ({ title, image, price}) => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+ 
 
   return (
     <div>
