@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
+import Products from "./components/products"
 
 const App =()=> {
  
@@ -7,6 +8,8 @@ const App =()=> {
 
   return( 
   <div>
+
+<Products />
     </div>
 
 
