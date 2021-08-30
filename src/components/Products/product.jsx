@@ -41,7 +41,7 @@ const Product = ({ title, image, price,id }) => {
             <Typography style={{ textAlign: 'center' }} >{title}</Typography>
           </Grid>
 
-          <Typography style={{ textAlign: 'center' }} varient="h3">RS: {price}</Typography>
+          <Typography style={{ textAlign: 'center' }} >RS: {price}</Typography>
           <Button
             variant="contained"
             color="secondary"

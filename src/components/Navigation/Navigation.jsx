@@ -151,7 +151,7 @@ export default function Navigation() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>Sign In</p>
       </MenuItem>
     </Menu>
   );
