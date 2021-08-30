@@ -18,8 +18,8 @@ const useStyles = makeStyles(theme => ({
     height:500
   },
   media: {
-  
-    paddingLeft:50,
+  marginRight:"auto",
+  marginLeft:"auto",
     paddingTop:30
   },
  }));
@@ -32,11 +32,11 @@ const Product = ({ title, image, price}) => {
     <div>
       <Card className={classes.root}>
        
-     <img src={image} style={{height:"50%",width:"50%",}} className={classes.media}/>
+     <img src={image} style={{height:"50%",width:"50%",display:"block"}} className={classes.media}/>
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
-          <Grid>
-        <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
+          <Grid style={{height:70}}>
+        <Typography style={{ textAlign: 'center',}}>{title}</Typography>
         </Grid>
         <Typography style={{paddingLeft:30,paddingRight:"auto"}}>RS: {price}</Typography>
           <button >Add To Cart</button >
