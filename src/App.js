@@ -11,14 +11,14 @@ const App =()=> {
 
   return( 
   <div>
-<BrowserRouter>
+
 <Products />
-<Route exact  path="/product">
+{/* <Route exact  path="/product">
 <Products /></Route>
 <Route   path="/product/:id">
-<ProductDetails  /></Route>
+<ProductDetails  /></Route> */}
 
-</BrowserRouter>
+
     
 </div>
 

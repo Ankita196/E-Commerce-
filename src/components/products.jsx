@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
 
-import Product from "./Products/product"
+import Product from './Products/product';
 const useStyles = makeStyles(theme => ({
   root: {
     padding: '2px 4px',
@@ -50,33 +50,27 @@ const Products = () => {
   }, []);
 
   return (
-<div>
-      
+    <div>
       <div>
         <Grid container spacing={7}>
-        {products.map((product, index)=> (
+          {products.map((product, index) => (
             <Grid
               item
               xs={12}
               sm={3}
-              style={{marginLeft:"auto", alignItems: 'center' }}
-            > 
+              style={{ marginLeft: 'auto', alignItems: 'center' }}
+            >
               <Product
                 title={product.title}
                 image={product.image}
                 price={product.price}
-                id={product.id}
               />
-              
             </Grid>
           ))}
         </Grid>
       </div>
     </div>
   );
-
-     
- 
 };
 
 export default Products;
