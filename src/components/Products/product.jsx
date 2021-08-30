@@ -38,10 +38,10 @@ const Product = ({ title, image, price,id }) => {
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
           <Grid style={{ height: 90 }}>
-            <Typography style={{ textAlign: 'center' }}>{title}</Typography>
+            <Typography style={{ textAlign: 'center' }} >{title}</Typography>
           </Grid>
 
-          <Typography style={{ textAlign: 'center' }}>RS: {price}</Typography>
+          <Typography style={{ textAlign: 'center' }} varient="h3">RS: {price}</Typography>
           <Button
             variant="contained"
             color="secondary"
