@@ -132,9 +132,7 @@ export default function Navigation() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-       <Typography className={classes.title} variant="h6" noWrap>
-      ShopOnline
-          </Typography>
+      
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={0} color="secondary">
