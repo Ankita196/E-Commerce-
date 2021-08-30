@@ -24,17 +24,7 @@ const useStyles = makeStyles(theme => ({
   marginLeft:"auto",
   marginRight:"auto"
   },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest
-    })
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)'
-  }
-}));
+ }));
 
 const Product = ({ title, image, price}) => {
   const classes = useStyles();
