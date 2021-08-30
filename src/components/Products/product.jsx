@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
-import Avatar from '@material-ui/core/Avatar';
+import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -19,7 +19,8 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
   
-    paddingLeft:50,paddingRight:30
+    paddingLeft:50,
+    paddingTop:30
   },
  }));
 
@@ -34,7 +35,9 @@ const Product = ({ title, image, price}) => {
      <img src={image} style={{height:"50%",width:"50%",}} className={classes.media}/>
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
+          <Grid>
         <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
+        </Grid>
         <Typography style={{paddingLeft:30,paddingRight:"auto"}}>RS: {price}</Typography>
           <button >Add To Cart</button >
           <button >Description</button >
