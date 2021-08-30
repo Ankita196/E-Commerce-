@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -39,7 +39,9 @@ const Product = ({ title, image, price}) => {
         <Typography style={{ textAlign: 'center',}}>{title}</Typography>
         </Grid>
         <Typography style={{textAlign: 'center'}}>RS: {price}</Typography>
-        
+        <Button variant="contained" color="secondary" style={{display:"block", marginRight:"auto", marginLeft:"auto",}}>
+        ADD TO CART
+      </Button>
         </CardContent>
         
        
