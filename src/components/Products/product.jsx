@@ -22,19 +22,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Product = ({ title, image, price }) => {
+const Product = ({ title, image, price,id }) => {
   const classes = useStyles();
 
   return (
     <div>
       <Card className={classes.root}>
-        <Link to={`/product/${id}`}>
+      <Link to={`/product/${id}`}>
           <img
             src={image}
             style={{ height: '50%', width: '50%', display: 'block' }}
             className={classes.media}
-          />{' '}
-        </Link>
+          /></Link>
+       
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
           <Grid style={{ height: 90 }}>

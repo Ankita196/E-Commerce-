@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 
-const ProductDetails = (props) => {
-  const classes = useStyles();
+const ProductDetails = ({id}) => {
+  
   const [product, setProducts] = useState({});
+ 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products/'+props.prams.match.id)
+    fetch('https://fakestoreapi.com/products/1')
       .then(res => res.json())
       .then(json => setProducts(json));
-  }, [props.prams.match.id]);
+  }, []);
 
   return (
 <div>

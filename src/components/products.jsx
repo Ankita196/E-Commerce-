@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -43,7 +44,7 @@ const Products = () => {
   const classes = useStyles();
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://fakestoreapi.com/product/')
       .then(res => res.json())
       .then(json => setProducts(json));
   }, []);
@@ -59,13 +60,14 @@ const Products = () => {
               xs={12}
               sm={3}
               style={{marginLeft:"auto", alignItems: 'center' }}
-            >
+            > 
               <Product
                 title={product.title}
                 image={product.image}
                 price={product.price}
                 id={product.id}
               />
+              
             </Grid>
           ))}
         </Grid>
