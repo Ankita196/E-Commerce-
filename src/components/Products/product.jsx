@@ -35,12 +35,11 @@ const Product = ({ title, image, price}) => {
      <img src={image} style={{height:"50%",width:"50%",display:"block"}} className={classes.media}/>
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
-          <Grid style={{height:70}}>
+          <Grid style={{height:90}}>
         <Typography style={{ textAlign: 'center',}}>{title}</Typography>
         </Grid>
-        <Typography style={{paddingLeft:30,paddingRight:"auto"}}>RS: {price}</Typography>
-          <button >Add To Cart</button >
-          <button >Description</button >
+        <Typography style={{textAlign: 'center'}}>RS: {price}</Typography>
+        
         </CardContent>
         
        
