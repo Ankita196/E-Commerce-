@@ -34,10 +34,11 @@ const Product = ({ title, image, price}) => {
     <div>
       <Card className={classes.root}>
        
-      <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
+      
        
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent>
+        <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
           <Typography style={{marginBottom:0}}>
             Price:{price}
           </Typography>
