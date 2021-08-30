@@ -8,7 +8,7 @@ const ProductDetails = (props) => {
     fetch('https://fakestoreapi.com/products/'+props.prams.match.id)
       .then(res => res.json())
       .then(json => setProducts(json));
-  }, []);
+  }, [props.prams.match.id]);
 
   return (
 <div>
