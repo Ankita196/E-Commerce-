@@ -18,11 +18,8 @@ const useStyles = makeStyles(theme => ({
     height:500
   },
   media: {
-  maxWidth:200,
-  maxHeight:200 ,
-  paddingTop:"100%",
-  marginLeft:"auto",
-  marginRight:"auto"
+  
+    paddingLeft:50,paddingRight:30
   },
  }));
 
@@ -34,7 +31,7 @@ const Product = ({ title, image, price}) => {
     <div>
       <Card className={classes.root}>
        
-     <img src={image} style={{height:"50%",width:"50%"}} />
+     <img src={image} style={{height:"50%",width:"50%",}} className={classes.media}/>
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
         <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
