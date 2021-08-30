@@ -28,12 +28,12 @@ const Product = ({ title, image, price,id }) => {
   return (
     <div>
       <Card className={classes.root}>
-      <Link to={`/product/${id}`}>
+     
           <img
             src={image}
             style={{ height: '50%', width: '50%', display: 'block' }}
             className={classes.media}
-          /></Link>
+          />
        
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>

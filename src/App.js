@@ -13,12 +13,7 @@ const App =()=> {
   <div>
 
 <Products />
-{/* <Route exact  path="/product">
-<Products /></Route>
-<Route   path="/product/:id">
-<ProductDetails  /></Route> */}
-
-
+ 
     
 </div>
 

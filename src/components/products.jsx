@@ -44,7 +44,7 @@ const Products = () => {
   const classes = useStyles();
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://fakestoreapi.com/product/')
+    fetch('https://fakestoreapi.com/products/')
       .then(res => res.json())
       .then(json => setProducts(json));
   }, []);
