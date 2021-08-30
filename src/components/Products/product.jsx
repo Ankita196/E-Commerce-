@@ -33,11 +33,9 @@ const Product = ({ title, image, price}) => {
   return (
     <div>
       <Card className={classes.root}>
-        <CardHeader
-          
-          title={title}
-         
-        />
+       
+      <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
+       
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent>
           <Typography style={{marginBottom:0}}>
