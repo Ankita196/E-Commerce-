@@ -14,7 +14,7 @@ const ProductDetails = () => {
 <div>
       
       <div>
-        <Grid container spacing={7}>
+        
        
             <Grid
               item
