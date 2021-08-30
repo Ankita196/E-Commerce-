@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -34,14 +34,11 @@ const Product = ({ title, image, price}) => {
     <div>
       <Card className={classes.root}>
        
-      
-       
-        <CardMedia className={classes.media} image={image} title={title} />
+     <img src={image} style={{height:"50%",width:"50%"}} />
+        {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
         <Typography style={{paddingLeft:30,paddingRight:"auto"}}>{title}</Typography>
-          <Typography style={{marginBottom:0}}>
-            Price:{price}
-          </Typography>
+        <Typography style={{paddingLeft:30,paddingRight:"auto"}}>RS: {price}</Typography>
           <button >Add To Cart</button >
           <button >Description</button >
         </CardContent>
