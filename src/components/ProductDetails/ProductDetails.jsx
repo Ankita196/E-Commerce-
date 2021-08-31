@@ -43,9 +43,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductDetails = () => {
+const ProductDetails = (props) => {
+  console.log(props)
   const classes = useStyles();
-  const [product, setProducts] = useState([]);
+  const [product, setProducts] = useState();
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/1`)
       .then(res => res.json())
