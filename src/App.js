@@ -16,7 +16,7 @@ const App =()=> {
 
  <BrowserRouter>
  <Route exact path="/"><Products /></Route>
- <Route exact path="/products"><ProductDetails /></Route>
+
  </BrowserRouter>
     
 </div>
