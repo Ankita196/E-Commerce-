@@ -67,7 +67,7 @@ const Products = () => {
     <div>
       <div>
         <Grid container spacing={7}>
-          {products.map((product, index) => (
+          {products.map((product) => (
             <Grid
               item
               xs={12}
@@ -75,16 +75,16 @@ const Products = () => {
               style={{ marginLeft: 'auto', alignItems: 'center' }}
             >
                
-               <div>
+               <div key={product.id}>
       <Card className={classes.root}>
        
-     
+     <Link to={`/product/${product.id}`}>
           <img
             src={product.image}
             style={{ height: '50%', width: '50%', display: 'block' }}
             className={classes.media}
           />
-       
+       </Link>
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
           <Grid style={{ height: 90 }}>
