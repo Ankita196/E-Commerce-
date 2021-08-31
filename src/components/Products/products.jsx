@@ -18,8 +18,8 @@ const useStyles = makeStyles(theme => ({
     
     margin: '40px auto',
     alignItems: 'center',
-    width: 300,
-    height: 500
+    width:300,
+    height: 400
   },
   input: {
     marginLeft: theme.spacing(5),
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   media: {
     marginRight: 'auto',
     marginLeft: 'auto',
-    paddingTop: 30
+    
   },
   heading: {
     padding: theme.spacing(1),
@@ -90,7 +90,7 @@ const Products = () => {
           <Grid style={{ height: 90 }}>
             <Typography style={{ textAlign: 'center' }} >{product.title}</Typography>
           </Grid>
-           
+          
           <Typography style={{ textAlign: 'center' }} >RS: {product.price}</Typography>
           <Button
             variant="contained"
