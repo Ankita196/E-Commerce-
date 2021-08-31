@@ -78,7 +78,7 @@ const Products = () => {
                <div key={product.id}>
       <Card className={classes.root}>
        
-     <Link to={`/product/${product.id}`}>
+     <Link to={`/products/${product.id}`}>
           <img
             src={product.image}
             style={{ height: '50%', width: '50%', display: 'block' }}

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-
+import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+
 
 import Product from './Products/product';
 const useStyles = makeStyles(theme => ({
@@ -66,7 +69,7 @@ const ProductDetails = () => {
      </Grid>
 
      <Typography style={{ textAlign: 'center' }} >RS: {product.price}</Typography>
-     <Button
+     {/* <Button
        variant="contained"
        color="secondary"
        style={{
@@ -76,7 +79,7 @@ const ProductDetails = () => {
        }}
      >
        ADD TO CART
-     </Button>
+     </Button> */}
    </CardContent>
  </Card>
     </div>
