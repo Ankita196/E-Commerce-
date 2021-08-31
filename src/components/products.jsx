@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
+
 import Grid from '@material-ui/core/Grid';
 
 import Product from './Products/product';
@@ -60,11 +61,13 @@ const Products = () => {
               sm={3}
               style={{ marginLeft: 'auto', alignItems: 'center' }}
             >
+               <Link to='/products/${id}'>
               <Product
                 title={product.title}
                 image={product.image}
                 price={product.price}
               />
+              </Link>
             </Grid>
           ))}
         </Grid>

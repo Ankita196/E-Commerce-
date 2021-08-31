@@ -28,6 +28,7 @@ const Product = ({ title, image, price,id }) => {
   return (
     <div>
       <Card className={classes.root}>
+       
      
           <img
             src={image}
@@ -40,7 +41,7 @@ const Product = ({ title, image, price,id }) => {
           <Grid style={{ height: 90 }}>
             <Typography style={{ textAlign: 'center' }} >{title}</Typography>
           </Grid>
-
+           
           <Typography style={{ textAlign: 'center' }} >RS: {price}</Typography>
           <Button
             variant="contained"
