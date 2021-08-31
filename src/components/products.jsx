@@ -67,6 +67,7 @@ const Products = () => {
                 image={product.image}
                 price={product.price}
               />
+              
               </Link>
             </Grid>
           ))}

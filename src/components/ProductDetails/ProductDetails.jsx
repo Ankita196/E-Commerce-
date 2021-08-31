@@ -42,9 +42,9 @@ const useStyles = makeStyles(theme => ({
 
 const ProductDetails = () => {
   const classes = useStyles();
-  const [products, setProducts] = useState([]);
+  const [product, setProducts] = useState([]);
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch(`https://fakestoreapi.com/products/1`)
       .then(res => res.json())
       .then(json => setProducts(json));
   }, []);
@@ -54,7 +54,7 @@ const ProductDetails = () => {
       <Card className={classes.root}>
      
      <img
-       src={image}
+       src={product.image}
        style={{ height: '50%', width: '50%', display: 'block' }}
        className={classes.media}
      />
@@ -62,10 +62,10 @@ const ProductDetails = () => {
    {/* <CardMedia className={classes.media} image={image} title={title} /> */}
    <CardContent>
      <Grid style={{ height: 90 }}>
-       <Typography style={{ textAlign: 'center' }} >{title}</Typography>
+       <Typography style={{ textAlign: 'center' }} >{product.title}</Typography>
      </Grid>
 
-     <Typography style={{ textAlign: 'center' }} >RS: {price}</Typography>
+     <Typography style={{ textAlign: 'center' }} >RS: {product.price}</Typography>
      <Button
        variant="contained"
        color="secondary"
