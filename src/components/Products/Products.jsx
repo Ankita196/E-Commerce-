@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Grid from '@material-ui/core/Grid';
 
-import Product from './Products/product';
+
 const useStyles = makeStyles(theme => ({
   root: {
     padding: '2px 4px',
@@ -67,7 +67,7 @@ const Products = () => {
     <div>
       <div>
         <Grid container spacing={7}>
-          {products.map((product) => (
+          {products.map((product,index) => (
             <Grid
               item
               xs={12}
@@ -75,7 +75,7 @@ const Products = () => {
               style={{ marginLeft: 'auto', alignItems: 'center' }}
             >
                
-               <div key={product.id}>
+               <div  >
       <Card className={classes.root}>
        
      <Link to={`/products/${product.id}`}>
