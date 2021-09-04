@@ -11,14 +11,13 @@ import Typography from '@material-ui/core/Typography';
 
 import Grid from '@material-ui/core/Grid';
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     padding: '2px 4px',
-    
+
     margin: '40px auto',
     alignItems: 'center',
-    width:300,
+    width: 300,
     height: 400
   },
   input: {
@@ -29,11 +28,10 @@ const useStyles = makeStyles(theme => ({
   iconButton: {
     padding: 10
   },
- 
+
   media: {
     marginRight: 'auto',
-    marginLeft: 'auto',
-    
+    marginLeft: 'auto'
   },
   heading: {
     padding: theme.spacing(1),
@@ -67,47 +65,47 @@ const Products = () => {
     <div>
       <div>
         <Grid container spacing={7}>
-          {products.map((product,index) => (
+          {products.map((product, index) => (
             <Grid
               item
               xs={12}
               sm={3}
               style={{ marginLeft: 'auto', alignItems: 'center' }}
             >
-               
-               <div  >
-      <Card className={classes.root}>
-       
-     <Link to={`/products/${product.id}`}>
-          <img
-            src={product.image}
-            style={{ height: '50%', width: '50%', display: 'block' }}
-            className={classes.media}
-          />
-       </Link>
-        {/* <CardMedia className={classes.media} image={image} title={title} /> */}
-        <CardContent>
-          <Grid style={{ height: 90 }}>
-            <Typography style={{ textAlign: 'center' }} >{product.title}</Typography>
-          </Grid>
-          
-          <Typography style={{ textAlign: 'center' }} >RS: {product.price}</Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            style={{
-              display: 'block',
-              marginRight: 'auto',
-              marginLeft: 'auto'
-            }}
-          >
-            ADD TO CART
-          </Button>
-        </CardContent>
-      </Card>
-    </div>
-              
-             
+              <div>
+                <Card className={classes.root}>
+                  <Link to={`/products/${product.id}`}>
+                    <img
+                      src={product.image}
+                      style={{ height: '50%', width: '50%', display: 'block' }}
+                      className={classes.media}
+                    />
+                  </Link>
+                  {/* <CardMedia className={classes.media} image={image} title={title} /> */}
+                  <CardContent>
+                    <Grid style={{ height: 90 }}>
+                      <Typography style={{ textAlign: 'center' }}>
+                        {product.title}
+                      </Typography>
+                    </Grid>
+
+                    <Typography style={{ textAlign: 'center' }}>
+                      RS: {product.price}
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      style={{
+                        display: 'block',
+                        marginRight: 'auto',
+                        marginLeft: 'auto'
+                      }}
+                    >
+                      ADD TO CART
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </Grid>
           ))}
         </Grid>
