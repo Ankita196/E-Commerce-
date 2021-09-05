@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductDetails = props => {
+const Cart = props => {
   console.log(props);
   const classes = useStyles();
   const [product, setProducts] = useState([]);
@@ -57,11 +57,11 @@ const ProductDetails = props => {
   return (
     <div>
       <Card className={classes.root}>
-        <img
+        {/* <img
           src={product.image}
           style={{ height: '50%', width: '50%', display: 'block' }}
           className={classes.media}
-        />
+        /> */}
 
         {/* <CardMedia className={classes.media} image={image} title={title} /> */}
         <CardContent>
@@ -97,4 +97,4 @@ const ProductDetails = props => {
   );
 };
 
-export default ProductDetails;
+export default Cart;

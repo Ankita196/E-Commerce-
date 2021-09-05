@@ -4,6 +4,7 @@ import Products from './components/Products/Products';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
+import Cart from './components/Cart/Cart'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Products />
           </Route>
           <Route path="/products/:id" component={ProductDetails} />
+          <Route path="/cart/:id" component={Cart} />
         </Switch>
       </BrowserRouter>
     </div>
