@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
-
 import Product from './Products/product';
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,14 +42,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductDetails = (props) => {
- console.log(props)
+const ProductDetails = props => {
+  console.log(props);
   const classes = useStyles();
   const [product, setProducts] = useState([]);
-  
+  const id = props.match.params.id;
   useEffect(() => {
-   
-    fetch(`https://fakestoreapi.com/products/`)
+    fetch(`https://fakestoreapi.com/products/${id}`)
       .then(res => res.json())
       .then(json => setProducts(json));
   }, []);
@@ -58,21 +56,24 @@ const ProductDetails = (props) => {
   return (
     <div>
       <Card className={classes.root}>
-     
-     <img
-       src={product.image}
-       style={{ height: '50%', width: '50%', display: 'block' }}
-       className={classes.media}
-     />
-  
-   {/* <CardMedia className={classes.media} image={image} title={title} /> */}
-   <CardContent>
-     <Grid style={{ height: 90 }}>
-       <Typography style={{ textAlign: 'center' }} >{product.title}</Typography>
-     </Grid>
+        <img
+          src={product.image}
+          style={{ height: '50%', width: '50%', display: 'block' }}
+          className={classes.media}
+        />
 
-     <Typography style={{ textAlign: 'center' }} >RS: {product.price}</Typography>
-     {/* <Button
+        {/* <CardMedia className={classes.media} image={image} title={title} /> */}
+        <CardContent>
+          <Grid style={{ height: 90 }}>
+            <Typography style={{ textAlign: 'center' }}>
+              {product.title}
+            </Typography>
+          </Grid>
+
+          <Typography style={{ textAlign: 'center' }}>
+            RS: {product.price}
+          </Typography>
+          {/* <Button
        variant="contained"
        color="secondary"
        style={{
@@ -83,8 +84,8 @@ const ProductDetails = (props) => {
      >
        ADD TO CART
      </Button> */}
-   </CardContent>
- </Card>
+        </CardContent>
+      </Card>
     </div>
   );
 };
