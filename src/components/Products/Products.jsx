@@ -91,7 +91,7 @@ const Products = () => {
 
                     <Typography style={{ textAlign: 'center' }}>
                       RS: {product.price}
-                    </Typography>
+                    </Typography> <Link to={`/cart/${product.id}`}>
                     <Button
                       variant="contained"
                       color="secondary"
@@ -103,6 +103,7 @@ const Products = () => {
                     >
                       ADD TO CART
                     </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>
