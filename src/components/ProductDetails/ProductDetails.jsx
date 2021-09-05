@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 import Product from './Products/product';
 const useStyles = makeStyles(theme => ({
@@ -66,6 +67,9 @@ const ProductDetails = props => {
         <CardContent>
           <Grid style={{ height: 90 }}>
             <Typography style={{ textAlign: 'center' }}>
+              {product.category}
+            </Typography>
+            <Typography style={{ textAlign: 'center' }}>
               {product.title}
             </Typography>
           </Grid>
@@ -73,17 +77,20 @@ const ProductDetails = props => {
           <Typography style={{ textAlign: 'center' }}>
             RS: {product.price}
           </Typography>
-          {/* <Button
-       variant="contained"
-       color="secondary"
-       style={{
-         display: 'block',
-         marginRight: 'auto',
-         marginLeft: 'auto'
-       }}
-     >
-       ADD TO CART
-     </Button> */}
+          <Typography style={{ textAlign: 'center' }}>
+            {product.description}
+          </Typography>
+          <Button
+            variant="contained"
+            color="secondary"
+            style={{
+              display: 'block',
+              marginRight: 'auto',
+              marginLeft: 'auto'
+            }}
+          >
+            ADD TO CART
+          </Button>
         </CardContent>
       </Card>
     </div>
